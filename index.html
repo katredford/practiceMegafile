@@ -12,65 +12,78 @@
 // Practice #1
         // this is to display the day and time a certain way. it starts with t
         // method and uses all these different methods to display each unit of time
-        var today = new Date();
-        var day = today.getDay()
-        // getDay() converts the days of the week into a number, because those numbers correspond
-        // to the following array we can display the number that getDay() provides as a string in the 
-        // console log
-        var daylist = ["Sunday","Monday","Tuesday","Wednesday", "Thursday","Friday","Saturday"]
-        console.log("today is:" + daylist[day] + ".");
+//         var today = new Date();
+//         var day = today.getDay()
+//         // getDay() converts the days of the week into a number, because those numbers correspond
+//         // to the following array we can display the number that getDay() provides as a string in the 
+//         // console log
+//         var daylist = ["Sunday","Monday","Tuesday","Wednesday", "Thursday","Friday","Saturday"]
+//         console.log("today is:" + daylist[day] + ".");
 
-        var hour = today.getHours();
-        var minute = today.getMinutes();
-        // var second = today.getseconds();
+//         var hour = today.getHours();
+//         var minute = today.getMinutes();
+//         // var second = today.getseconds();
 
-        // this is an "if" statement, the "?" is used as in if statment when the answere is 
-        // yes or no
-        var dayNight = (hour >= 12)? " PM ":" AM ";
-        hour = (hour >= 12)? hour -12: hour;
-        if (hour===0 && dayNight===' PM ') 
-        { 
-        if (minute===0 && second===0)
-            { 
-                hour=12;
-                dayNight=' Noon';
-         } else { 
-                hour=12;
-                dayNight=' PM';
-                } 
-        } 
+//         // this is an "if" statement, the "?" is used as in if statment when the answere is 
+//         // yes or no
+//         var dayNight = (hour >= 12)? " PM ":" AM ";
+//         hour = (hour >= 12)? hour -12: hour;
+//         if (hour===0 && dayNight===' PM ') 
+//         { 
+//         if (minute===0 && second===0)
+//             { 
+//                 hour=12;
+//                 dayNight=' Noon';
+//          } else { 
+//                 hour=12;
+//                 dayNight=' PM';
+//                 } 
+//         } 
   
-    if (hour===0 && dayNight===' AM ') { 
-        if (minute===0 && second===0)
-    { 
-        hour=12;
-        dayNight=' Midnight';
-    } else { 
-        hour=12;
-        dayNight=' AM';
-    } 
-  } 
-console.log("Current Time : "+hour + dayNight + " : " + minute + " : " );
+//     if (hour===0 && dayNight===' AM ') { 
+//         if (minute===0 && second===0)
+//     { 
+//         hour=12;
+//         dayNight=' Midnight';
+//     } else { 
+//         hour=12;
+//         dayNight=' AM';
+//     } 
+//   } 
+// console.log("Current Time : "+hour + dayNight + " : " + minute + " : " );
 
-// FizzBuzz 
-// Write a program that prints the numbers from 1 to 100 and for multiples 
-// of '3' print "Fizz" instead of the number and for the multiples of '5'
-//  print "Buzz".
+// // FizzBuzz 
+// // Write a program that prints the numbers from 1 to 100 and for multiples 
+// // of '3' print "Fizz" instead of the number and for the multiples of '5'
+// //  print "Buzz".
 
-    for ( i = 1; i <= 100; i++) {
-        if (i % 3 ===0 && i % 5 ===0) {
-            console.log("FizzBuzz");
-        }
-        else if (i % 3 === 0) {
-            console.log("Fizz");
-        }
-        else if (i % 5 === 0) {
-            console.log("Buzz");
-        } else {
-            console.log(i);
-        }
+//     for ( i = 1; i <= 100; i++) {
+//         if (i % 3 ===0 && i % 5 ===0) {
+//             console.log("FizzBuzz");
+//         }
+//         else if (i % 3 === 0) {
+//             console.log("Fizz");
+//         }
+//         else if (i % 5 === 0) {
+//             console.log("Buzz");
+//         } else {
+//             console.log(i);
+//         }
+//     }
+
+//write a Javascript program that accept two integers and display the larger
+var num1, num2;
+num1 = window.prompt("Input the First integer", "0");
+num2 = window.prompt("input the second integer", "0");
+
+if(parseInt(num1, 10) > parseInt(num2, 10)) 
+{ console.log("the Larger of " + num1 + " and " + num2 + " is " + num1 + ".");
+} else 
+    if(parseInt(num2, 10) > parseInt(num1, 10)) {
+        console.log("The larger of " + num1 + " and " + num2 + ".");
+    } else {
+        console.log("the values " + num1 + " and" + num2 + " are equal.");
     }
-
 
 
 
